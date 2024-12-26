@@ -10,4 +10,5 @@ instance_type = "t2.micro"
 region = "eu-west-3"
 
 # vpc module
-cidr_block = var.cidr_block
+vpc_name = "vpc-webserver"
+cidr_block    = "173.32.0.0/16"

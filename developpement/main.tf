@@ -1,8 +1,9 @@
 module "vpc" {
-  source = "../Modules/vpc"
+  source     = "../Modules/vpc"
 
+  vpc_name   = var.vpc_name
   cidr_block = var.cidr_block
-
+  
 }
 
 module "ec2_instance" {
@@ -12,12 +13,11 @@ module "ec2_instance" {
   ami           = var.ami
   Environment   = var.Environment
   instance_type = var.instance_type
-  vpc_id        = module.vpc.vpc_id
 
 }
 
 module "security_groups" {
-  source = "../Modules/sg"
+  source        = "../Modules/sg"
 
   instance_name = var.instance_name
 }
