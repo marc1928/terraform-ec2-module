@@ -10,10 +10,10 @@ resource "aws_instance" "webserver" {
   key_name = aws_key_pair.public_key.key_name
 
   tags = {
-  Terraform   = "true"
-  Name = var.instance_name
-  Environment = var.Environment
-}
+    Terraform   = "true"
+    Name        = var.instance_name
+    Environment = var.Environment
+  }
 }
 
 output "instance_id" {
