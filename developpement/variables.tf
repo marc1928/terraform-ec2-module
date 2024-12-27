@@ -30,7 +30,7 @@ variable "region" {
 
 # vpc Module
 
-variable "cidr_block" {
+variable "vpc_cidr_block" {
   description = "CIDR block for the VPC"
   type        = string
 }
@@ -38,6 +38,22 @@ variable "vpc_name" {
   description = "Name of the VPC"
   type        = string
 }
+
+# subnet
+
+variable "subnet_cidr_block" {
+  description = "CIDR block for the subnet"
+  type        = string
+}
+variable "subnet_name" {
+  description = "Name of the subnet"
+  type        = string
+}
+variable "availability_zone" {
+  description = "availability zone for the subnet"
+  type = string
+}
+
 
 
 

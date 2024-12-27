@@ -2,7 +2,7 @@ resource "aws_security_group" "sg" {
   name        = "sg-${var.instance_name}"
   description = "Security group for ${var.instance_name}"
 
-  vpc_id = aws_vpc.main.id
+  vpc_id = aws_vpc.main.vpc_id
 
   # inbound (all)
   ingress {
