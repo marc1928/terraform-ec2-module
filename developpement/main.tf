@@ -34,9 +34,7 @@ module "ec2_instance" {
   ami                     = var.ami
   Environment             = var.Environment
   instance_type           = var.instance_type 
-
-  subnet_id = module.subnet.subnet_id
-
+   
 }
 
 module "sg" {
